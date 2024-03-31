@@ -1,5 +1,6 @@
 package com.example.GR.Account.model;
 
+import com.example.GR.Product.model.Pay;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.*;
@@ -11,6 +12,8 @@ import javax.persistence.*;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Date;
+import java.util.Set;
+
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -53,8 +56,6 @@ public class User implements UserDetails {
     @JsonBackReference
     @JoinColumn(name = "roleid", foreignKey = @ForeignKey(name = "fk_user_role"))
     private Role role;
-
-
 
 
 
